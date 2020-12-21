@@ -1,0 +1,28 @@
+a)
+[Error] 'string' was not declared in this scope
+[Error] 'cout' was not declared in this scope
+[Error] 'endl' was not declared in this scope
+[Error] 'cin' was not declared in this scope
+[Error] 'name' was not declared in this scope
+[Error] 'getline' was not declared in this scope
+recipe for target 'testscritter.o' failed
+
+This problems can be fixed by calling std:: before each command.
+Example: std::string
+	 std::cout
+	 std::cin and so on.
+The std is short for the standard identifiers in c++ that contains the major
+commands like cout,cin, and also others. Either we can use 
+using namespace std after including the libraries or we can put
+std:: before each command in the standard stream.
+
+b)
+[Error] 'name' was not declared in this scope
+
+We used to Critter:: to reference the class Critter. By doing that all
+variables and functions in class Critter can be accessed using the 
+Critter::"variable name" syntax.
+
+The error is that the compiler cant find any variable named name in that local
+function. By using the Critter:: , it looks for and can edit any variable
+or function in Clitter class.
